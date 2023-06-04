@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Image {{ image.id }}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ image.id }}</td>
+            </tr>
+            <tr>
+                <th>Image name</th>
+                <td>{{ image.imageName }}</td>
+            </tr>
+            <tr>
+                <th>Image file</th>
+                <td><img src="{{ vich_uploader_asset(image, 'imageFile') }}" /></td>
+                <td><img {{image.imagePath}} /></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+{% endblock %}

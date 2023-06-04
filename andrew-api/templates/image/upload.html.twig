@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>New Image</h1>
+
+    {{ form_start(form, {'action': path('image_upload', {'user_id': user_id}), 'method': 'POST'}) }}
+        {{ form_row(form.imageFile) }}
+        <button type="submit">Create</button>
+    {{ form_end(form) }}
+
+{% endblock %}
